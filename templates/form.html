@@ -3,93 +3,124 @@
   <title>Nombre aplicacion</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <style>
+    .contenedor{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .formulario{
+      width: 100%;
+    }
+    .pareja{
+      float: left;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-left: 10%;
+
+    }
+    .bajo{
+      margin-top: 20px;
+    }
+    .pareja2{
+      margin-top: 20px;
+      float: left !important;
+      margin-left: 10%;
+    }
+    .pequeno{
+      width: 50%;
+      float: right;
+    }
+  </style>
   </head>
   <body>
-    <h1>Login</h1>
+    <div class="contenedor">
     <form action="{{ url_for('report') }}" method="POST">
-<p>¿Dónde ha sucedido?</p>
-    <select name=" ¿Dónde ha sucedido?">
-      <option value="" name="">--Selecciona--</option>
-      <option value="Recinto escolar y/o alrededores" name="Recinto escolar y/o alrededores">Recinto escolar y/o alrededores</option>
-      <option value="Excursión" name="Excursión">Excursión</option>
-    </select>
-
-<p>¿Dónde ha sucedido?</p>
-    <select name="¿Dónde ha sucedido?">
-      <option value="" name="">--Selecciona--</option>
-      <option value="Recinto escolar y/o alrededores" name="Recinto escolar y/o alrededores">Recinto escolar y/o alrededores</option>
-      <option value="Excursión" name="Excursión">Excursión</option>
-    </select>
-
-    <p>Suceso</p>
-        <select name="Suceso">
-          <option value="" name="">--Selecciona--</option>
-          <option value="Pelea" name="Pelea">Pelea</option>
-          <option value="Caída (A mismo nivel de altura)" name="Caída (A mismo nivel de altura)">Caída (A mismo nivel de altura)</option>
-          <option value="Precipitación (A nivel de altura diferente)" name="Precipitación (A nivel de altura diferente)">Precipitación (A nivel de altura diferente)</option>
-          <option value="Muerte" name="Muerte">Muerte</option>
-          <option value="Intoxicación alimentaria" name="Intoxicación alimentaria">Intoxicación alimentaria</option>
-          <option value="Desmayo" name="Desmayo">Desmayo</option>
-          <option value="Alergias" name="Alergias">Alergias</option>
-          <option value="Plagas de piojos" name="Plagas de piojos">Plagas de piojos</option>
-          <option value="Pérdida/ desaparición" name="Pérdida/ desaparición">Pérdida/ desaparición</option>
-          <option value="Fuga/ escapada" name="Fuga/ escapada">Fuga/ escapada</option>
-          <option value="Quemaduras" name="Quemaduras">Quemaduras</option>
-          <option value="Destrucción de mobiliario" name="Destrucción de mobiliario">Destrucción de mobiliario</option>
-          <option value="Asfixia" name="Asfixia">Asfixia</option>
-        </select>
-
-<!--        <p>Pelea</p>
-            <select name="Pelea">
-              <option value="" name="">--Selecciona--</option>
-              <option value="Puñetazos" name="Puñetazos">Puñetazos</option>
-              <option value="Patadas" name="Patadas">Patadas</option>
-              <option value="Mordiscos" name="Mordiscos">Mordiscos</option>
-              <option value="Lanzamiento de objetos (bolígrafos, lápices, gomas, sillas, piedras…)" name="Lanzamiento de objetos (bolígrafos, lápices, gomas, sillas, piedras…)">Lanzamiento de objetos (bolígrafos, lápices, gomas, sillas, piedras…)</option>
-            </select>-->
-
-            <p>¿Quiénes han participado?</p>
-                <select name="¿Quiénes han participado?">
-                  <option value="" name="">--Selecciona--</option>
-                  <option value="1 alumno" name="1 alumno">1 alumno</option>
-                  <option value="Varios alumnos (= 2)" name="Varios alumnos (= 2)">Varios alumnos (= 2)</option>
-                  <option value="Varios alumnos (+2)" name="Varios alumnos (+2)">Varios alumnos (+2)</option>
-                </select>
-
-                <p> Resultado:</p>
-                    <select name=" Resultado:">
-                      <option value="" name="">--Selecciona--</option>
-                      <option value="Arañazos" name="Arañazos">Arañazos</option>
-                      <option value="Moratones" name="Moratones">Moratones</option>
-                      <option value="Rotura de huesos" name="Rotura de huesos">Rotura de huesos</option>
-                      <option value="Rotura de la vestimenta" name="Rotura de la vestimenta">Rotura de la vestimenta</option>
-                      <option value="Cortes" name="Cortes">Cortes</option>
-                      <option value="Puntos" name="Puntos">Puntos</option>
-                      <option value="Grapas" name="Grapas">Grapas</option>
-                    </select>
-
-                    <p>¿Ha sido necesaria asistencia médica?</p>
-                        <select name="¿Ha sido necesaria asistencia médica?">
-                          <option value="" name="">--Selecciona--</option>
-                          <option value="Sí" name="Sí">Sí</option>
-                          <option value="No" name="No">No</option>
-                        </select>
-
-                        <p>Esa asistencia ha sido</p>
-                            <select name="Esa asistencia ha sido">
-                              <option value="" name="">--Selecciona--</option>
-                              <option value="Interna del propio centro" name="Interna del propio centro">Interna del propio centro</option>
-                              <option value="Ajena al centro" name="Ajena al centro">Ajena al centro</option>
-                            </select>
-
-                            <p>Si lo considera necesario puede escribir aquí los comentarios que considere oportunos: (No limitar cantidad de texto)</p>
-
-<textarea name="obsservaciones"></textarea>
+      <div class="formulario">
+        <div class="pareja">
+          <p>¿Dónde ha sucedido?</p>
+          <div class="select">
+          <select name=" ¿Dónde ha sucedido?">
+            <option value="" name="">--Selecciona--</option>
+            <option value="Recinto escolar y/o alrededores" name="Recinto escolar y/o alrededores">Recinto escolar y/o alrededores</option>
+            <option value="Excursión" name="Excursión">Excursión</option>
+          </select>
+          </div>
+          <p>¿Dónde ha sucedido?</p>
+          <div class="select">
+          <select name="¿Dónde ha sucedido?">
+            <option value="" name="">--Selecciona--</option>
+            <option value="Recinto escolar y/o alrededores" name="Recinto escolar y/o alrededores">Recinto escolar y/o alrededores</option>
+            <option value="Excursión" name="Excursión">Excursión</option>
+          </select>
+          </div>
+        </div>
+<p>Suceso</p>
+<div class="select">
+  <select name="Suceso">
+    <option value="" name="">--Selecciona--</option>
+    <option value="Pelea" name="Pelea">Pelea</option>
+    <option value="Caída (A mismo nivel de altura)" name="Caída (A mismo nivel de altura)">Caída (A mismo nivel de altura)</option>
+    <option value="Precipitación (A nivel de altura diferente)" name="Precipitación (A nivel de altura diferente)">Precipitación (A nivel de altura diferente)</option>
+    <option value="Muerte" name="Muerte">Muerte</option>
+    <option value="Intoxicación alimentaria" name="Intoxicación alimentaria">Intoxicación alimentaria</option>
+    <option value="Desmayo" name="Desmayo">Desmayo</option>
+    <option value="Alergias" name="Alergias">Alergias</option>
+    <option value="Plagas de piojos" name="Plagas de piojos">Plagas de piojos</option>
+    <option value="Pérdida/ desaparición" name="Pérdida/ desaparición">Pérdida/ desaparición</option>
+    <option value="Fuga/ escapada" name="Fuga/ escapada">Fuga/ escapada</option>
+    <option value="Quemaduras" name="Quemaduras">Quemaduras</option>
+    <option value="Destrucción de mobiliario" name="Destrucción de mobiliario">Destrucción de mobiliario</option>
+    <option value="Asfixia" name="Asfixia">Asfixia</option>
+  </select>
+</div>
+<p>¿Quiénes han participado?</p>
+<div class="select">
+  <select name="¿Quiénes han participado?">
+    <option value="" name="">--Selecciona--</option>
+    <option value="1 alumno" name="1 alumno">1 alumno</option>
+    <option value="Varios alumnos (= 2)" name="Varios alumnos (= 2)">Varios alumnos (= 2)</option>
+    <option value="Varios alumnos (+2)" name="Varios alumnos (+2)">Varios alumnos (+2)</option>
+  </select>
+</div>
+<div class="pequeno">
+<p class="bajo">Resultado:</p>
+<div class="select">
+  <select name=" Resultado:">
+    <option value="" name="">--Selecciona--</option>
+    <option value="Arañazos" name="Arañazos">Arañazos</option>
+    <option value="Moratones" name="Moratones">Moratones</option>
+    <option value="Rotura de huesos" name="Rotura de huesos">Rotura de huesos</option>
+    <option value="Rotura de la vestimenta" name="Rotura de la vestimenta">Rotura de la vestimenta</option>
+    <option value="Cortes" name="Cortes">Cortes</option>
+    <option value="Puntos" name="Puntos">Puntos</option>
+    <option value="Grapas" name="Grapas">Grapas</option>
+  </select>
+</div>
+<p>¿Ha sido necesaria asistencia médica?</p>
+<div class="select">
+  <select name="¿Ha sido necesaria asistencia médica?">
+    <option value="" name="">--Selecciona--</option>
+    <option value="Sí" name="Sí">Sí</option>
+    <option value="No" name="No">No</option>
+  </select>
+</div>
+</div> <div class="pareja2">
+<p>Esa asistencia ha sido</p>
+<div class="select">
+  <select name="Esa asistencia ha sido">
+    <option value="" name="">--Selecciona--</option>
+    <option value="Interna del propio centro" name="Interna del propio centro">Interna del propio centro</option>
+    <option value="Ajena al centro" name="Ajena al centro">Ajena al centro</option>
+  </select>
+</div>
+</div>
+  <div class="control">
+    <p>Si lo considera necesario puede escribir aquí los comentarios que considere oportunos: (No limitar cantidad de texto)</p>
+    <textarea class="textarea has-fixed-size" placeholder="observaciones" name="observaciones"></textarea>
+  </div>
 <input type="submit" value="Echo" class="button is-primary" id="button">
+</div>
 </form>
-
-
-
-
+</div>
   </body>
 </html>

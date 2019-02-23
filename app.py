@@ -74,14 +74,14 @@ def form():
 @app.route('/report', methods=['POST'])
 def report():
     #Coger las opciones elegidas
-    opciones = request.form['']
+    #opciones = request.form['']
 
 
-    file = open("copy.txt", "w")
-    for user in users:
-        file.write("%s\n" % user)
-        file.close()
-    return render_template('report.html')
+    # file = open("copy.txt", "w")
+    # for user in users:
+    #     file.write("%s\n" % user)
+    #     file.close()
+    return render_template('reports.html')
 
 
 
