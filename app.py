@@ -16,14 +16,18 @@ users = [{"Pilar": "123"},
 questions = [{"": ""},
              {"": ""}]
 
-
+################################
+######## INDEX #################
+################################
 @app.route('/index')
 def index():
     return render_template('index.html')
 
 
 
-
+################################
+######## LOGIN #################
+################################
 @app.route('/form', methods=['POST'])
 def form():
     userF = request.form['user']
@@ -36,6 +40,12 @@ def form():
             return render_template('index.html')
 
 
+################################
+######## FORM #################
+################################
+@app.route('/', methods=['POST'])
+def report():
+    pass
 
 
 
