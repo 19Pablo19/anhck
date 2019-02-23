@@ -13,8 +13,36 @@ users = [{"Pilar": "123"},
 #         print("NOP")
 
 
-questions = [{"": ""},
-             {"": ""}]
+questions = [{"¿En Horario?": ["Horario Lectivo",
+                               "Actividad extraescolar",
+                               "Actividad complementario"]},
+             {"Suceso": [{"Pelea": ["Puñetazos",
+                                    "Patadas",
+                                    "Mordiscos",
+                                    "Lanzamiento de objetos (bolígrafos, lápices, gomas, sillas, piedras…)"]},
+                         "Caída (A mismo nivel de altura)",
+                         "Precipitación (A nivel de altura diferente)",
+                         "Muerte",
+                         "Intoxicación alimentaria",
+                         "Desmayo",
+                         "Alergias",
+                         "Plagas de piojos",
+                         "Pérdida/ desaparición",
+                         "Fuga/ escapada",
+                         "Quemaduras",
+                         "Destrucción de mobiliario",
+                         "Asfixia"]},
+            {"¿Quiénes han participado?": []},
+            {"Resultado": ["Arañazos",
+                           "Moratones",
+                           "Rotura de huesos",
+                           "Rotura de la vestimenta",
+                           "Cortes",
+                           "Puntos",
+                           "Grapas"]}]
+
+
+
 
 ################################
 ######## INDEX #################
@@ -37,15 +65,24 @@ def form():
         if userF in users[user] and users[user][userF] == passwordF:
             return render_template('form.html', user=userF)
         else:
-            return render_template('index.html')
+            return index()
 
 
 ################################
-######## FORM #################
+######## FORM ##################
 ################################
-@app.route('/', methods=['POST'])
+@app.route('/report', methods=['POST'])
 def report():
-    pass
+    #Coger las opciones elegidas
+    opciones = request.form['']
+
+
+    file = open("copy.txt", "w")
+    for user in users:
+        file.write("%s\n" % user)
+        file.close()
+    return render_template('report.html')
+
 
 
 
