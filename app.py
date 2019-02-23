@@ -74,15 +74,20 @@ def form():
 @app.route('/report', methods=['POST'])
 def report():
     #Coger las opciones elegidas
-    #opciones = request.form['']
+    respuesta1 = request.form['¿Dónde ha sucedido?']
+    respuesta2 = request.form['Suceso']
+    respuesta3 = request.form['¿Quiénes han participado?']
+    respuesta4 = request.form[' Resultado:']
+    respuesta5 = request.form['¿Ha sido necesaria asistencia médica?']
+    respuesta6 = request.form['Esa asistencia ha sido']
 
-
-    # file = open("copy.txt", "w")
-    # for user in users:
-    #     file.write("%s\n" % user)
-    #     file.close()
-    return render_template('reports.html')
-
+    respuestas = [respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6]
+    print(respuestas)
+    file = open("report.txt", "w")
+    for respuesta in respuestas:
+        file.write("%s \n" % respuesta)
+    file.close()
+    return render_template('reports.py')
 
 
 
