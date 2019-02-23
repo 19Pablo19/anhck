@@ -27,12 +27,19 @@
       margin-left: 10%;
     }
     .pequeno{
-      width: 50%;
-      float: right;
+      width: 40%;
+      float: left;
+      margin-left: 10%;
+    }
+    .derecha{
+
     }
   </style>
   </head>
   <body>
+    <div class="cabecera">
+      <img src="img/logo.png" alt="">
+    </div>
     <div class="contenedor">
     <form action="{{ url_for('report') }}" method="POST">
       <div class="formulario">
@@ -45,13 +52,15 @@
             <option value="Excursión" name="Excursión">Excursión</option>
           </select>
           </div>
-          <p>¿Dónde ha sucedido?</p>
+
+          <p>¿Quiénes han participado?</p>
           <div class="select">
-          <select name="¿Dónde ha sucedido?">
-            <option value="" name="">--Selecciona--</option>
-            <option value="Recinto escolar y/o alrededores" name="Recinto escolar y/o alrededores">Recinto escolar y/o alrededores</option>
-            <option value="Excursión" name="Excursión">Excursión</option>
-          </select>
+            <select name="¿Quiénes han participado?">
+              <option value="" name="">--Selecciona--</option>
+              <option value="1 alumno" name="1 alumno">1 alumno</option>
+              <option value="Varios alumnos (= 2)" name="Varios alumnos (= 2)">Varios alumnos (= 2)</option>
+              <option value="Varios alumnos (+2)" name="Varios alumnos (+2)">Varios alumnos (+2)</option>
+            </select>
           </div>
         </div>
 <p>Suceso</p>
@@ -73,17 +82,16 @@
     <option value="Asfixia" name="Asfixia">Asfixia</option>
   </select>
 </div>
-<p>¿Quiénes han participado?</p>
+<p>Esa asistencia ha sido</p>
 <div class="select">
-  <select name="¿Quiénes han participado?">
+  <select name="Esa asistencia ha sido">
     <option value="" name="">--Selecciona--</option>
-    <option value="1 alumno" name="1 alumno">1 alumno</option>
-    <option value="Varios alumnos (= 2)" name="Varios alumnos (= 2)">Varios alumnos (= 2)</option>
-    <option value="Varios alumnos (+2)" name="Varios alumnos (+2)">Varios alumnos (+2)</option>
+    <option value="Interna del propio centro" name="Interna del propio centro">Interna del propio centro</option>
+    <option value="Ajena al centro" name="Ajena al centro">Ajena al centro</option>
   </select>
 </div>
 <div class="pequeno">
-<p class="bajo">Resultado:</p>
+<p>Resultado:</p>
 <div class="select">
   <select name=" Resultado:">
     <option value="" name="">--Selecciona--</option>
@@ -96,23 +104,18 @@
     <option value="Grapas" name="Grapas">Grapas</option>
   </select>
 </div>
-<p>¿Ha sido necesaria asistencia médica?</p>
-<div class="select">
-  <select name="¿Ha sido necesaria asistencia médica?">
-    <option value="" name="">--Selecciona--</option>
-    <option value="Sí" name="Sí">Sí</option>
-    <option value="No" name="No">No</option>
-  </select>
 </div>
-</div> <div class="pareja2">
-<p>Esa asistencia ha sido</p>
-<div class="select">
-  <select name="Esa asistencia ha sido">
-    <option value="" name="">--Selecciona--</option>
-    <option value="Interna del propio centro" name="Interna del propio centro">Interna del propio centro</option>
-    <option value="Ajena al centro" name="Ajena al centro">Ajena al centro</option>
-  </select>
+<div class="derecha">
+  <p>¿Ha sido necesaria asistencia médica?</p>
+  <div class="select">
+    <select name="¿Ha sido necesaria asistencia médica?">
+      <option value="" name="">--Selecciona--</option>
+      <option value="Sí" name="Sí">Sí</option>
+      <option value="No" name="No">No</option>
+    </select>
+  </div>
 </div>
+ <div class="pareja2">
 </div>
   <div class="control">
     <p>Si lo considera necesario puede escribir aquí los comentarios que considere oportunos: (No limitar cantidad de texto)</p>
