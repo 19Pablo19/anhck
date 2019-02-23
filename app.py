@@ -17,20 +17,26 @@ questions = [{"": ""},
              {"": ""}]
 
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
-@app.route('/login', methods=['POST'])
-def index(name, password):
+
+
+
+@app.route('/form', methods=['POST'])
+def form():
+    userF = request.form['user']
+    passwordF = request.form['password']
+    print(userF)
     for user in range(len(users)):
-        if name in users[user] and users[user][name]:
-            return render_template('index.html', user=name, password=passsword)
+        if userF in users[user] and users[user][userF] == passwordF:
+            return render_template('form.html', user=userF)
         else:
-            return print("User or password incorrect")
+            return render_template('index.html')
 
 
 
-@app.route("/echo", methods=['POST'])
-def echo():
-    return "You said: " + request.form['text']
 
 
 
