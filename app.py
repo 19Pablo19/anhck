@@ -105,6 +105,12 @@ def allreports():
 def reportex():
     return render_template('reportex.html')
 
+################################
+######## ALL REPORTS 1 #########
+################################
+@app.route('/allreports/1')
+def reportex2():
+    return render_template('reportex2.html')
 
 
 
