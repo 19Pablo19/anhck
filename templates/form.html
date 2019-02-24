@@ -32,7 +32,12 @@
       margin-left: 10%;
     }
     .derecha{
-
+float: left;
+margin-left: 5%;
+    }
+    .izquierda{
+float: right;
+margin-right: 5%;
     }
   </style>
   </head>
@@ -43,7 +48,7 @@
     <div class="contenedor">
     <form action="{{ url_for('report') }}" method="POST">
       <div class="formulario">
-        <div class="pareja">
+        <div class="derecha">
           <p>¿Dónde ha sucedido?</p>
           <div class="select">
           <select name=" ¿Dónde ha sucedido?">
@@ -62,50 +67,48 @@
               <option value="Varios alumnos (+2)" name="Varios alumnos (+2)">Varios alumnos (+2)</option>
             </select>
           </div>
+          <p>Resultado:</p>
+          <div class="select">
+            <select name=" Resultado:">
+              <option value="" name="">--Selecciona--</option>
+              <option value="Arañazos" name="Arañazos">Arañazos</option>
+              <option value="Moratones" name="Moratones">Moratones</option>
+              <option value="Rotura de huesos" name="Rotura de huesos">Rotura de huesos</option>
+              <option value="Rotura de la vestimenta" name="Rotura de la vestimenta">Rotura de la vestimenta</option>
+              <option value="Cortes" name="Cortes">Cortes</option>
+              <option value="Puntos" name="Puntos">Puntos</option>
+              <option value="Grapas" name="Grapas">Grapas</option>
+            </select>
+          </div>
         </div>
-<p>Suceso</p>
-<div class="select">
-  <select name="Suceso">
-    <option value="" name="">--Selecciona--</option>
-    <option value="Pelea" name="Pelea">Pelea</option>
-    <option value="Caída (A mismo nivel de altura)" name="Caída (A mismo nivel de altura)">Caída (A mismo nivel de altura)</option>
-    <option value="Precipitación (A nivel de altura diferente)" name="Precipitación (A nivel de altura diferente)">Precipitación (A nivel de altura diferente)</option>
-    <option value="Muerte" name="Muerte">Muerte</option>
-    <option value="Intoxicación alimentaria" name="Intoxicación alimentaria">Intoxicación alimentaria</option>
-    <option value="Desmayo" name="Desmayo">Desmayo</option>
-    <option value="Alergias" name="Alergias">Alergias</option>
-    <option value="Plagas de piojos" name="Plagas de piojos">Plagas de piojos</option>
-    <option value="Pérdida/ desaparición" name="Pérdida/ desaparición">Pérdida/ desaparición</option>
-    <option value="Fuga/ escapada" name="Fuga/ escapada">Fuga/ escapada</option>
-    <option value="Quemaduras" name="Quemaduras">Quemaduras</option>
-    <option value="Destrucción de mobiliario" name="Destrucción de mobiliario">Destrucción de mobiliario</option>
-    <option value="Asfixia" name="Asfixia">Asfixia</option>
-  </select>
-</div>
-<p>Esa asistencia ha sido</p>
-<div class="select">
-  <select name="Esa asistencia ha sido">
-    <option value="" name="">--Selecciona--</option>
-    <option value="Interna del propio centro" name="Interna del propio centro">Interna del propio centro</option>
-    <option value="Ajena al centro" name="Ajena al centro">Ajena al centro</option>
-  </select>
-</div>
-<div class="pequeno">
-<p>Resultado:</p>
-<div class="select">
-  <select name=" Resultado:">
-    <option value="" name="">--Selecciona--</option>
-    <option value="Arañazos" name="Arañazos">Arañazos</option>
-    <option value="Moratones" name="Moratones">Moratones</option>
-    <option value="Rotura de huesos" name="Rotura de huesos">Rotura de huesos</option>
-    <option value="Rotura de la vestimenta" name="Rotura de la vestimenta">Rotura de la vestimenta</option>
-    <option value="Cortes" name="Cortes">Cortes</option>
-    <option value="Puntos" name="Puntos">Puntos</option>
-    <option value="Grapas" name="Grapas">Grapas</option>
-  </select>
-</div>
-</div>
-<div class="derecha">
+<div class="izquierda">
+  <p>Suceso</p>
+  <div class="select">
+    <select name="Suceso">
+      <option value="" name="">--Selecciona--</option>
+      <option value="Pelea" name="Pelea">Pelea</option>
+      <option value="Caída (A mismo nivel de altura)" name="Caída (A mismo nivel de altura)">Caída (A mismo nivel de altura)</option>
+      <option value="Precipitación (A nivel de altura diferente)" name="Precipitación (A nivel de altura diferente)">Precipitación (A nivel de altura diferente)</option>
+      <option value="Muerte" name="Muerte">Muerte</option>
+      <option value="Intoxicación alimentaria" name="Intoxicación alimentaria">Intoxicación alimentaria</option>
+      <option value="Desmayo" name="Desmayo">Desmayo</option>
+      <option value="Alergias" name="Alergias">Alergias</option>
+      <option value="Plagas de piojos" name="Plagas de piojos">Plagas de piojos</option>
+      <option value="Pérdida/ desaparición" name="Pérdida/ desaparición">Pérdida/ desaparición</option>
+      <option value="Fuga/ escapada" name="Fuga/ escapada">Fuga/ escapada</option>
+      <option value="Quemaduras" name="Quemaduras">Quemaduras</option>
+      <option value="Destrucción de mobiliario" name="Destrucción de mobiliario">Destrucción de mobiliario</option>
+      <option value="Asfixia" name="Asfixia">Asfixia</option>
+    </select>
+  </div>
+  <p>Esa asistencia ha sido</p>
+  <div class="select">
+    <select name="Esa asistencia ha sido">
+      <option value="" name="">--Selecciona--</option>
+      <option value="Interna del propio centro" name="Interna del propio centro">Interna del propio centro</option>
+      <option value="Ajena al centro" name="Ajena al centro">Ajena al centro</option>
+    </select>
+  </div>
   <p>¿Ha sido necesaria asistencia médica?</p>
   <div class="select">
     <select name="¿Ha sido necesaria asistencia médica?">
@@ -114,8 +117,6 @@
       <option value="No" name="No">No</option>
     </select>
   </div>
-</div>
- <div class="pareja2">
 </div>
   <div class="control">
     <p>Si lo considera necesario puede escribir aquí los comentarios que considere oportunos: (No limitar cantidad de texto)</p>
