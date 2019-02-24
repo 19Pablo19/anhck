@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 users = [{"Pilar": "123"},
          {"Marcos": "123"}]
@@ -87,7 +87,7 @@ def report():
     for respuesta in respuestas:
         file.write("%s \n" % respuesta)
     file.close()
-    return render_template('reports.py')
+    return render_template('reports.html')
 
 ################################
 ######## ALL REPORTS ##################
@@ -96,6 +96,28 @@ def report():
 def allreports():
 
     return render_template('allreports.html')
+
+
+################################
+######## ALL REPORTS 1 #########
+################################
+@app.route('/index', methods=['POST'])
+def reportex():
+    return render_template('index.html')
+
+
+
+
+################################
+######## LOGO ##################
+################################
+@app.route('/get_image')
+def get_image():
+    if request.args.get('type') == '1':
+       filename = 'logo.png'
+    else:
+       filename = 'error.gif'
+    return send_file(filename, mimetype='image/gif')
 
 
 

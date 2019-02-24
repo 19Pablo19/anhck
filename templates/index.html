@@ -11,7 +11,7 @@
 		width:400px;
 		margin-left:-200px;
 		height:300px;
-		margin-top:-150px;
+		margin-top:-180px;
 		padding:5px;
     background-color:
 	}
@@ -22,15 +22,31 @@
     margin-top: 20%;
     text-align:center;
     background-color: #e6fff7;
-    padding-top:15px;
+    padding:15px;
   }
   #button{
     margin-top: 5%;
     background-color: #328dd8;
   }
+  .cabecera{
+    margin-top: 10px;
+    height: 190px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+
+  }
+  .foto{
+    width: 20%;
+    height: 100%;
+  }
+
   </style>
 </head>
 <body>
+  <div class="cabecera">
+    <img class=foto src="/static/images/logo.png"/>
+  </div>
 <form action="{{ url_for('form') }}" method="POST">
   <div class="contenedor">
     <div class="centrar">

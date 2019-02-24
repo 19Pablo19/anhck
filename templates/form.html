@@ -6,10 +6,12 @@
   <style>
     .contenedor{
         margin-left: 20%;
-        margin-right: 20%;
+        float: left;
+        width: 90%;
     }
     .formulario{
       width: 100%;
+      margin-left: 20px
     }
     .pareja{
       float: left;
@@ -23,7 +25,7 @@
     }
     .pareja2{
       margin-top: 20px;
-      float: left !important;
+      float: left;
       margin-left: 10%;
     }
     .pequeno{
@@ -32,19 +34,43 @@
       margin-left: 10%;
     }
     .derecha{
+float: left;
+margin-left: 5%;
+    }
+    .izquierda{
+float: left;
+margin-left: 30px;
+margin-right: 5%;
+    }
+    .cabecera{
+      margin-top: 10px;
+      height: 190px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
 
+    }
+    .foto{
+      width: 20%;
+      height: 100%;
+    }
+
+    .select{
+      margin-left: 30px;
     }
   </style>
   </head>
   <body>
+
     <div class="cabecera">
-      <img src="img/logo.png" alt="">
+      <img class=foto src="/static/images/logo.png"/>
     </div>
+
     <div class="contenedor">
     <form action="{{ url_for('report') }}" method="POST">
       <div class="formulario">
-        <div class="pareja">
-          <p>¿Dónde ha sucedido?</p>
+        <div class="derecha">
+          <p style="margin-left:30px;">¿Dónde ha sucedido?</p>
           <div class="select">
           <select name=" ¿Dónde ha sucedido?">
             <option value="" name="">--Selecciona--</option>
@@ -52,8 +78,8 @@
             <option value="Excursión" name="Excursión">Excursión</option>
           </select>
           </div>
-          <br>
-          <p>¿Quiénes han participado?</p>
+
+          <p style="margin-left:30px;">¿Quiénes han participado?</p>
           <div class="select">
             <select name="¿Quiénes han participado?">
               <option value="" name="">--Selecciona--</option>
@@ -62,9 +88,21 @@
               <option value="Varios alumnos (+2)" name="Varios alumnos (+2)">Varios alumnos (+2)</option>
             </select>
           </div>
+          <p style="margin-left:30px;">Resultado:</p>
+          <div class="select">
+            <select name=" Resultado:">
+              <option value="" name="">--Selecciona--</option>
+              <option value="Arañazos" name="Arañazos">Arañazos</option>
+              <option value="Moratones" name="Moratones">Moratones</option>
+              <option value="Rotura de huesos" name="Rotura de huesos">Rotura de huesos</option>
+              <option value="Rotura de la vestimenta" name="Rotura de la vestimenta">Rotura de la vestimenta</option>
+              <option value="Cortes" name="Cortes">Cortes</option>
+              <option value="Puntos" name="Puntos">Puntos</option>
+              <option value="Grapas" name="Grapas">Grapas</option>
+            </select>
+          </div>
         </div>
-        <br>
-<p>Suceso</p>
+<p style="margin-left:30px;">Suceso</p>
 <div class="select">
   <select name="Suceso">
     <option value="" name="">--Selecciona--</option>
@@ -83,8 +121,7 @@
     <option value="Asfixia" name="Asfixia">Asfixia</option>
   </select>
 </div>
-<br>
-<p>Esa asistencia ha sido</p>
+<p style="margin-left:30px;">Esa asistencia ha sido</p>
 <div class="select">
   <select name="Esa asistencia ha sido">
     <option value="" name="">--Selecciona--</option>
@@ -92,25 +129,8 @@
     <option value="Ajena al centro" name="Ajena al centro">Ajena al centro</option>
   </select>
 </div>
-<br>
-<div class="pequeno">
-<p>Resultado:</p>
-<div class="select">
-  <select name=" Resultado:">
-    <option value="" name="">--Selecciona--</option>
-    <option value="Arañazos" name="Arañazos">Arañazos</option>
-    <option value="Moratones" name="Moratones">Moratones</option>
-    <option value="Rotura de huesos" name="Rotura de huesos">Rotura de huesos</option>
-    <option value="Rotura de la vestimenta" name="Rotura de la vestimenta">Rotura de la vestimenta</option>
-    <option value="Cortes" name="Cortes">Cortes</option>
-    <option value="Puntos" name="Puntos">Puntos</option>
-    <option value="Grapas" name="Grapas">Grapas</option>
-  </select>
-</div>
-</div>
-<br>
-<div class="derecha">
-  <p>¿Ha sido necesaria asistencia médica?</p>
+
+  <p style="margin-left:30px;">¿Ha sido necesaria asistencia médica?</p>
   <div class="select">
     <select name="¿Ha sido necesaria asistencia médica?">
       <option value="" name="">--Selecciona--</option>
@@ -119,14 +139,12 @@
     </select>
   </div>
 </div>
- <div class="pareja2">
 </div>
-  <div class="control">
-    <p>Si lo considera necesario puede escribir aquí los comentarios que considere oportunos: (No limitar cantidad de texto)</p>
-    <textarea class="textarea has-fixed-size" placeholder="observaciones" name="observaciones"></textarea>
+  <div class="control" style="width:80%; margin-left:10%;">
+    <p>Si lo considera necesario puede escribir aquí los comentarios que considere oportunos:</p>
+    <textarea class="textarea has-fixed-size" placeholder="Observaciones:" name="observaciones"></textarea>
   </div>
-<input type="submit" value="Echo" class="button is-primary" id="button">
-</div>
+<input type="submit" value="Enviar" class="button is-primary" id="button" style="float:right; margin-right:10%; margin-top:5px;">
 </form>
 </div>
   </body>

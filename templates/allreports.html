@@ -1,21 +1,10 @@
 <html>
 <head>
-  <title>Nombre aplicacion</title>
+  <title></title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <style>
- .centrar
-	{
-		position: absolute;
-		top:50%;
-		left:50%;
-		width:100px;
-		margin-left:-200px;
-		height:70px;
-		margin-top:-150px;
-		padding:5px;
 
-	}
       .centrar2
 	{
         height:70px;
@@ -23,34 +12,47 @@
         border: 1px solid;
         float: left;
         text-align: center;
-        margin-top: 200px;
-        margin-left: 50px;
+        margin-top: 5%;
+        margin-left: 5%;
       }
-      .contenedor
-	     {
-        background-color: #328dd8;
-        width: 80%;
-        height: 200px;
 
+      .cabecera{
+        margin-top: 10px;
+        height: 190px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+
+      }
+      .foto{
+        width: 20%;
+        height: 100%;
+      }
+      #contenedor{
+        background-color:  #e6fff7;
+        width: 80%;
+        float: left;
+        margin-left: 10%;
+        height: 200px;
       }
   </style>
   </head>
   <body>
-      <div class="contenedor">
+    <div class="cabecera">
+      <img class=foto src="/static/images/logo.png"/>
+    </div>
 
-        <a href="#">
-          <div class="cajas" style="margin-left: 100px;">
-           <div class="centrar2">
-                 <span>Parte #1</span>
+      <div id="contenedor">
+
+        <a href="{{ url_for('reportex') }}">
+           <div class="centrar2" style="margin-left: 15%;">
+                 <span>Caso 1</span>
            </div>
 
-          </div>
               </a>
-          <a href="#">
-          <div class="cajas">
+          <a href="{{ url_for('reportex') }}">
           <div class="centrar2">
-             <span>Parte #1</span>
-          </div>
+             <span>Caso 2</span>
           </div>
           </a>
     </div>
