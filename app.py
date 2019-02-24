@@ -101,9 +101,9 @@ def allreports():
 ################################
 ######## ALL REPORTS 1 #########
 ################################
-@app.route('/index', methods=['POST'])
+@app.route('/allreports/2')
 def reportex():
-    return render_template('index.html')
+    return render_template('reportex.html')
 
 
 

@@ -5,9 +5,11 @@
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <style>
     .contenedor{
-        margin-left: 20%;
+        margin-left: 10%;
         float: left;
-        width: 90%;
+        width: 80%;
+        height: 400px;
+        background-color: #e6fff7;
     }
     .formulario{
       width: 100%;
@@ -35,12 +37,11 @@
     }
     .derecha{
 float: left;
-margin-left: 5%;
+margin-left: 15%;
     }
     .izquierda{
-float: left;
-margin-left: 30px;
-margin-right: 5%;
+float: right;
+margin-right: 15%;
     }
     .cabecera{
       margin-top: 10px;
@@ -57,6 +58,7 @@ margin-right: 5%;
 
     .select{
       margin-left: 30px;
+      margin-bottom: 10px;
     }
   </style>
   </head>
@@ -102,6 +104,7 @@ margin-right: 5%;
             </select>
           </div>
         </div>
+        <div class="izquierda">
 <p style="margin-left:30px;">Suceso</p>
 <div class="select">
   <select name="Suceso">
@@ -140,12 +143,13 @@ margin-right: 5%;
   </div>
 </div>
 </div>
-  <div class="control" style="width:80%; margin-left:10%;">
-    <p>Si lo considera necesario puede escribir aquí los comentarios que considere oportunos:</p>
+  <div class="control" style="width:70%; margin-left:15%; margin-top: 15px;">
+    <p">Si lo considera necesario puede escribir aquí los comentarios que considere oportunos:</p>
     <textarea class="textarea has-fixed-size" placeholder="Observaciones:" name="observaciones"></textarea>
   </div>
-<input type="submit" value="Enviar" class="button is-primary" id="button" style="float:right; margin-right:10%; margin-top:5px;">
+<input type="submit" value="Enviar" class="button is-primary" id="button" style="float:right; margin-right:10%; margin-top:5px; background-color: #328dd8;">
 </form>
+</div>
 </div>
   </body>
 </html>
