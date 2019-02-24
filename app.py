@@ -93,9 +93,9 @@ def report():
 ######## ALL REPORTS ##################
 ################################
 @app.route('/allreports', methods=['POST'])
-def allreport():
+def allreports():
 
-    return render_template('allreports.py')
+    return render_template('allreports.html')
 
 
 

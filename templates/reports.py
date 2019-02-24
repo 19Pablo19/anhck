@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="centrar">
-    <form action="{{ url_for('report') }}" method="POST">
+    <form action="{{ url_for('allreports') }}" method="POST">
   <label for="respuesta1">¿Dónde ha sucedido?</label><p>Recinto escolar y/o alrededores</p><br>
   <label for="respuesta2">Suceso:</label><p>Pelea</p><br>
   <label for="respuesta3">¿Quiénes han participado?</label><p>Varios alumnos (=2)</p><br>
